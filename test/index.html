@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>分割线测试</title>
+	<style type="text/css">
+		.top, .foot {
+			width: 100%;
+			display: block;
+		}
+		.line {
+			width: 100%;
+			margin: 50px auto;
+		}
+		.left {
+			width: 35%;
+		}
+		.left-right {
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+			vertical-align: bottom;
+			display: inline-block;
+            width: 60px;
+            height: 60px;
+            position: relative;
+            background-color: transparent;
+        }
+
+            .left-right:before {
+                position: absolute;
+                top: 0px;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                border-bottom: 60px solid red;
+                border-right: 60px solid transparent;
+                content: "";
+            }
+
+            .left-right:after {
+                position: absolute;
+                left: 0;
+                right: 1px;
+                top: 1px;
+                bottom: 0;
+                border-bottom: 59px solid white;
+                border-right: 59px solid transparent;
+                content: "";
+            }
+		.right-left {
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+			vertical-align: bottom;
+			display: inline-block;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            background-color: transparent;
+        }
+
+            .right-left:before {
+                position: absolute;
+                top: 0px;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                border-bottom: 40px solid red;
+                border-left: 40px solid transparent;
+                content: "";
+            }
+
+            .right-left:after {
+                position: absolute;
+                left: 1px;
+                right: 0;
+                top: 1px;
+                bottom: 0;
+                border-bottom: 39px solid white;
+                border-left: 39px solid transparent;
+                content: "";
+            }
+	</style>
+</head>
+<body>
+	<div class="top"></div>
+	<div class="line">
+		<div class="left"><hr></div>
+		<div class="left-right"></div>
+		<div class="right-left"></div>
+		<div class="right"><hr></div>
+	</div>
+	<div class="foot"></div>
+</body>
+</html>
